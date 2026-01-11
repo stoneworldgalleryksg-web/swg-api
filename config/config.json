@@ -1,0 +1,16 @@
+{
+  "development": {
+    "username": "root",
+    "password": "",
+    "database": "stone_world_gallery",
+    "host": "localhost",
+    "dialect": "mysql"
+  },
+  "production": {
+    "username": "root",
+    "password": "",
+    "database": "stone_world_gallery",
+    "host": "localhost",
+    "dialect": "mysql"
+  }
+}
