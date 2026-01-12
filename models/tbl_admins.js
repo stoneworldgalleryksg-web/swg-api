@@ -1,7 +1,6 @@
 import { DataTypes } from 'sequelize';
-import sequelize from '../app_config/database.js';
 
-const Admin = sequelize.define('tbl_admins', {
+const Admin = (sequelize) => sequelize.define('tbl_admins', {
   id: {
     type: DataTypes.BIGINT,
     primaryKey: true,

@@ -1,7 +1,6 @@
 import { DataTypes } from 'sequelize';
-import sequelize from '../app_config/database.js';
 
-const StaticFile = sequelize.define('tbl_static_files', {
+const StaticFile = (sequelize) => sequelize.define('tbl_static_files', {
   id: {
     type: DataTypes.BIGINT,
     primaryKey: true,

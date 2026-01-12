@@ -19,3 +19,6 @@ Thumbs.db
 # Build
 dist/
 build/
+
+# Config files with secrets
+config/config.json

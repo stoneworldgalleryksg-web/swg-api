@@ -1,7 +1,6 @@
 import { DataTypes } from 'sequelize';
-import sequelize from '../app_config/database.js';
 
-const Category = sequelize.define('tbl_categories', {
+const Category = (sequelize) => sequelize.define('tbl_categories', {
   id: {
     type: DataTypes.BIGINT,
     primaryKey: true,

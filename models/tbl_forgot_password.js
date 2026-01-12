@@ -1,7 +1,6 @@
 import { DataTypes } from 'sequelize';
-import sequelize from '../app_config/database.js';
 
-const ForgotPassword = sequelize.define('tbl_forgot_password', {
+const ForgotPassword = (sequelize) => sequelize.define('tbl_forgot_password', {
   id: {
     type: DataTypes.BIGINT,
     primaryKey: true,

@@ -1,7 +1,6 @@
 import { DataTypes } from 'sequelize';
-import sequelize from '../app_config/database.js';
 
-const DeviceDetails = sequelize.define('tbl_device_details', {
+const DeviceDetails = (sequelize) => sequelize.define('tbl_device_details', {
   id: {
     type: DataTypes.BIGINT,
     primaryKey: true,

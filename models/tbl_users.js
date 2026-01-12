@@ -1,7 +1,6 @@
 import { DataTypes } from "sequelize";
-import sequelize from '../app_config/database.js';
 
-const User = sequelize.define(
+const User = (sequelize) => sequelize.define(
   "tbl_users",
   {
     id: {

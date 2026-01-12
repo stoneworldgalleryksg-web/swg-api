@@ -1,7 +1,7 @@
 import { DataTypes } from 'sequelize';
-import sequelize from '../app_config/database.js';
 
-const ProductImage = sequelize.define('tbl_product_images', {
+const ProductImage = (sequelize) => {
+  const model = sequelize.define('tbl_product_images', {
   id: {
     type: DataTypes.BIGINT,
     primaryKey: true,
@@ -27,13 +27,16 @@ const ProductImage = sequelize.define('tbl_product_images', {
 }, {
   tableName: 'tbl_product_images',
   timestamps: false
-});
-
-ProductImage.associate = (models) => {
-  ProductImage.belongsTo(models.tbl_products, {
-    foreignKey: 'product_id',
-    as: 'product'
   });
+
+  model.associate = (models) => {
+    model.belongsTo(models.tbl_products, {
+      foreignKey: 'product_id',
+      as: 'product'
+    });
+  };
+
+  return model;
 };
 
 export default ProductImage;
