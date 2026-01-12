@@ -9,8 +9,8 @@ const __dirname = path.dirname(__filename);
 const basename = path.basename(__filename);
 const db = {};
 
-// Load config.json (works without assert / with)
-import configFile from "../config/config.json" with { type: "json" };
+// Load config.js (using .env variables)
+import configFile from "../config/config.js";
 
 const env = process.env.NODE_ENV || "development";
 const config = configFile[env];

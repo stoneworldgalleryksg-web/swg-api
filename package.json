@@ -10,6 +10,9 @@
     "migrate:undo:all": "npx sequelize-cli db:migrate:undo:all",
     "seed": "npx sequelize-cli db:seed:all"
   },
+  "engines": {
+    "node": ">=18.x"
+  },
   "dependencies": {
     "cloudinary": "^2.8.0",
     "cookie-parser": "^1.4.6",
@@ -22,12 +25,11 @@
     "moment": "^2.29.4",
     "multer": "^2.0.2",
     "mysql2": "^3.16.0",
-    "nodemon": "^3.1.11",
     "sequelize": "^6.35.0",
-    "validator": "^13.11.0",
-    "Validator": "^1.1.4"
+    "validator": "^13.11.0"
   },
   "devDependencies": {
+    "nodemon": "^3.1.11",
     "sequelize-cli": "^6.6.2"
   }
 }
