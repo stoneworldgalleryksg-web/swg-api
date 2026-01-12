@@ -2,12 +2,14 @@ import moment from 'moment';
 import CODES from '../../../../../app_config/status_code.js';
 import GLOBALS from '../../../../../app_config/constants.js';
 import middleware from '../../../../../middleware/headerValidator.js';
-import Category from '../../../../../models/tbl_categories.js';
+import db from '../../../../../models/index.js';
 import cloudinaryService from '../../../../../utils/cloudinaryService.js';
 import { Op } from 'sequelize';
 import localizify from 'localizify';
 import category from '../controller/categoryController.js';
 const { t } = localizify;
+
+const { tbl_categories: Category } = db;
 
 const categoryModel = {
 

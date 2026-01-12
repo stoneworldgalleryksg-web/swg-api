@@ -4,7 +4,8 @@ import CryptoJS from 'crypto-js';
 import GLOBALS from './constants.js';
 import moment from 'moment';
 import cloudinaryService from '../utils/cloudinaryService.js';
-import ProductImage from '../models/tbl_product_images.js';
+import db from '../models/index.js';
+const { tbl_product_images: ProductImage } = db;
 
 
 const key = CryptoJS.enc.Utf8.parse(GLOBALS.KEY);

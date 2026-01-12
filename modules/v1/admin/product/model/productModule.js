@@ -2,15 +2,13 @@ import moment from 'moment';
 import CODES from '../../../../../app_config/status_code.js';
 import GLOBALS from '../../../../../app_config/constants.js';
 import middleware from '../../../../../middleware/headerValidator.js';
-import Product from '../../../../../models/tbl_products.js';
-import ProductImage from '../../../../../models/tbl_product_images.js';
-import Category from '../../../../../models/tbl_categories.js';
+import db from '../../../../../models/index.js';
 import { Op } from 'sequelize';
 import localizify from 'localizify';
 import common from '../../../../../app_config/common.js';
-import db from '../../../../../models/index.js';
 
 const { t } = localizify;
+const { tbl_products: Product, tbl_product_images: ProductImage, tbl_categories: Category } = db;
 
 const productModel = {
 

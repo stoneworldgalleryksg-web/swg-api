@@ -2,12 +2,12 @@ import moment from 'moment';
 import CODES from '../../../../../app_config/status_code.js';
 import common from '../../../../../app_config/common.js';
 import middleware from '../../../../../middleware/headerValidator.js';
-import Admin from '../../../../../models/tbl_admins.js';
-import ForgotPassword from '../../../../../models/tbl_forgot_password.js';
-import DeviceDetails from '../../../../../models/tbl_device_details.js';
+import db from '../../../../../models/index.js';
 import cloudinaryService from '../../../../../utils/cloudinaryService.js';
 import localizify from 'localizify';
 const { t } = localizify;
+
+const { tbl_admins: Admin, tbl_forgot_password: ForgotPassword, tbl_device_details: DeviceDetails } = db;
 
 const authModel = {
 

@@ -1,7 +1,8 @@
 import cloudinaryService from '../../../../../utils/cloudinaryService.js';
 import middleware from '../../../../../middleware/headerValidator.js';
 import CODES from '../../../../../app_config/status_code.js';
-import StaticFile from '../../../../../models/tbl_static_files.js';
+import db from '../../../../../models/index.js';
+const { tbl_static_files: StaticFile } = db;
 import moment from 'moment';
 
 const uploadController = {

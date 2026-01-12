@@ -2,8 +2,9 @@ import moment from 'moment';
 import CODES from '../../../../../app_config/status_code.js';
 import common from '../../../../../app_config/common.js';
 import middleware from '../../../../../middleware/headerValidator.js';
-import User from '../../../../../models/tbl_users.js';
-import ForgotPassword from '../../../../../models/tbl_forgot_password.js';
+import db from '../../../../../models/index.js';
+
+const { tbl_users: User, tbl_forgot_password: ForgotPassword } = db;
 
 const authModel = {
 
