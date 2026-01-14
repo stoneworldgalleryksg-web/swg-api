@@ -22,11 +22,6 @@ const sequelize = new Sequelize(
     port: dbConfig.port,
     dialect: dbConfig.dialect,
     logging: false,
-    dialectOptions: {
-      ssl: {
-        rejectUnauthorized: false
-      }
-    }
   }
 );
 

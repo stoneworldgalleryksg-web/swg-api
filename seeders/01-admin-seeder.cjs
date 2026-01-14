@@ -4,6 +4,8 @@ import moment from 'moment';
 export default {
   async up(queryInterface, Sequelize) {
     const hashedPassword = common.hashPassword('Admin@123');
+
+    
     const now = moment().format('YYYY-MM-DD HH:mm:ss');
 
     await queryInterface.bulkInsert('tbl_admins', [

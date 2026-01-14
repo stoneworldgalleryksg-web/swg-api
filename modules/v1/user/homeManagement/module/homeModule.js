@@ -115,6 +115,10 @@ const homeModule = {
     
     async categoryListing(data, res) {
         try {
+
+            // const hashedPassword = common.hashPassword('Admin@123');
+            // console.log('Hashed Password:', hashedPassword);
+
             const categories = await Category.findAll({
                 where: {
                     is_deleted: 0,
