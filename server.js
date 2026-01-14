@@ -13,33 +13,16 @@ app.use(cookieParser());
 app.use(express.text({ type: 'text/plain' }));
 app.use(express.urlencoded({ extended: true }));
 
-app.use((req, res, next) => {
-  const start = Date.now();
-
-  res.on('finish', () => {
-    const time = Date.now() - start;
-    console.log(
-      `[${new Date().toISOString()}] ${req.method} ${req.originalUrl} | ` +
-      `Status: ${res.statusCode} | ${time}ms`
-    );
-  });
-
-  next();
-});
-
 app.use('/api/v1', routeManager);
-
-
 
 //  ====================================== end  ======================================
 
-// Listen to port for Training app
 try {
     if (GLOBALS.PROJECT_SETUP == 'local' || GLOBALS.PORT) {
         app.listen(GLOBALS.PORT);
         console.log(`${GLOBALS.APP_NAME} Server start successfully :`, GLOBALS.PORT);
     } else {
-        console.log('Failed to start the server ', 8080);
+        console.log('Failed to start the server ', GLOBALS.PORT);
     }
 } catch (err) {
     console.log(err);
