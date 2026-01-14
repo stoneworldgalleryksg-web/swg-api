@@ -95,7 +95,6 @@ const authModel = {
     async getCredentials(req, res) {
         try {
             const adminId = req.user?.adminId;
-            console.log("adminId", adminId)
             const admin = await Admin.findOne({
                 where: { id: adminId, is_deleted: 0 },
                 attributes: { exclude: ['password'] }

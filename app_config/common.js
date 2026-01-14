@@ -29,8 +29,8 @@ const common = {
         try {
             const decrypted = CryptoJS.AES.decrypt(encryptedPassword, key, { iv: iv });
             const decryptedPassword = decrypted.toString(CryptoJS.enc.Utf8);
-            // console.log("descryptedPassword:", decryptedPassword);
-            return password === decryptedPassword;
+            console.log("descryptedPassword:", decryptedPassword);
+            return password == decryptedPassword;
         } catch (error) {
             return false;
         }
